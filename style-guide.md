@@ -1,4 +1,4 @@
-# Essential Stuff
+<!-- # Essential Stuff
 
 ## Html import links
 
@@ -72,4 +72,4 @@ Ionicon
 --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
 --cubic-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 --cubic-ease-out: 700ms cubic-bezier(0.17, 0.67, 0, 1.01);
-```
+``` -->
