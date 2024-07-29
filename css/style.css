@@ -1,22 +1,10 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
 header {
-  background-color: #4CAF50;
+  background-color: #325833cf;
   color: white;
   padding: 1em 0;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
 
 header p {
   margin: 0.5em 0 0;
@@ -31,57 +19,41 @@ header p {
   text-decoration: none;
 }
 
-main {
-  padding: 2em;
-}
 
-h2 {
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 0.2em;
-}
-
-section {
-  margin-bottom: 2em;
-}
-
-.education-entry,
-.experience-entry,
-.project-entry {
-  margin-bottom: 1.5em;
-}
-
-.education-entry h3,
-.experience-entry h3,
-.project-entry h3 {
-  margin: 0;
-  font-size: 1.5em;
-  color: #4CAF50;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 0.5em 0;
-}
-
-footer {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
 a {
-  color: #4CAF50;
+  color: #325833;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0 2em;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+img {
+  width: 40em;
+  max-width: 40%;
+  width: 20em;
+  max-width: 80%;
+  height: auto;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2em 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
