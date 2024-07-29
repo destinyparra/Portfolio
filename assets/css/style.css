@@ -20,8 +20,12 @@ p {
 }
 
 img {
-  width: 40em;
-  max-width: 40%;
+  width: 20em;
+  /* Adjust the width to a more reasonable size */
+  max-width: 80%;
+  /* Ensure the image doesn't exceed 80% of the viewport width */
+  height: auto;
+  /* Maintain the aspect ratio */
   border: 2px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 2em 0;
