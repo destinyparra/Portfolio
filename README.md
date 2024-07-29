@@ -1,2 +1,2 @@
-# destnyparra
+# destinyparra
 Personal Portfolio
