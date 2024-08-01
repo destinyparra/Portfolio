@@ -1,0 +1,64 @@
+
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
+  # CUSTOM PROPERTIES
+\*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+:root is a special selector in CSS.
+It is used to target the highest-level parent element in the document tree, which is the <html> element in an HTML document.
+
+
+What are CSS Custom Properties?
+CSS custom properties (variables) allow you to store values in one place and reuse them throughout your stylesheet. They help improve code maintainability, readability, and consistency. Custom properties are defined using the -- prefix and are accessed using the var() function.
+
+Why Use Custom Properties?
+Reusability: Define a value once and reuse it multiple times.
+Consistency: Ensure the same value is used throughout your stylesheet.
+Maintainability: Easily update a value in one place instead of searching and replacing throughout the stylesheet.
+Dynamic Styling: Custom properties can be dynamically updated using JavaScript or CSS.
+
+
+  /*-=-=-=-=-=-*\
+   custom colors
+  \*-=-=-=-=-=-*/
+  Colors: Custom color variables using HSLA values.
+
+--raisin-black, --roman-silver, etc., define shades of black, silver, and white
+
+
+  /*-=-=-=-=-=-*\
+     typography
+  \*-=-=-=-=-=-*/
+
+Typography: Custom font family, font sizes, and font weights.
+--ff-syne sets the font family to 'Syne', sans-serif.
+--fs-1 to --fs-8 define various font sizes.
+--fw-800 and --fw-700 define font weights.
+
+
+  /*-=-=-=-=-=-*\
+      spacing
+  \*-=-=-=-=-=-*/
+
+
+Spacing: Custom spacing values.
+  
+--section-padding sets a padding value for sections.
+Border Radius: Custom border radius values for different shapes.
+
+  /*-=-=-=-=-=-*\
+   border radius
+  \*-=-=-=-=-=-*/
+
+--radius-pill and --radius-circle define border radii for pill and circle shapes.
+--blob-radius defines a more complex border radius for blob-like shapes.
+Transitions: Custom transition values for animations.
+
+can visualize blob using https://9elements.github.io/fancy-border-radius/#43.40.52.51--
+
+  /*-=-=-=-=-=-*\
+     transition
+  \*-=-=-=-=-=-*/
+
+--transition-1, --transition-2, and other cubic-bezier functions define the timing and easing of transitions.
+
