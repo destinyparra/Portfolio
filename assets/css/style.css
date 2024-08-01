@@ -46,14 +46,14 @@ img {
   width: 20em;
   max-width: 80%;
   height: auto;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid #ccc; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   margin: 2em 0;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover {
+/* img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+} */
