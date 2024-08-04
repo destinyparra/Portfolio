@@ -160,7 +160,6 @@ body.nav-active {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # REUSED STYLE
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
 .container {
   padding-inline: 12px;
 }
@@ -172,7 +171,6 @@ body.nav-active {
 .h1 {
   font-size: var(--fs-3);
   font-weight: var(--fw-800);
-
 }
 
 .h1,
@@ -182,10 +180,8 @@ body.nav-active {
   line-height: 1;
 }
 
-
-
 .h2 {
-  font-size: var(--f2-2);
+  font-size: var(--fs-2);
 }
 
 .h3 {
@@ -193,7 +189,6 @@ body.nav-active {
   font-size: var(--fs-4);
   line-height: 1.5;
 }
-
 
 .h4 {
   font-size: var(--fs-5);
@@ -220,15 +215,27 @@ body.nav-active {
   z-index: -1;
 }
 
-
 .btn {
   color: var(--white);
   display: flex;
   align-items: center;
   gap: 4px;
   max-width: max-content;
-  min-width: min-content;
+  min-width: max-content;
   padding: 20px 32px;
+}
+
+
+.btn::before {
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 2px solid var(--white_a5);
+  border-radius: var(--radius-circle);
+  transition: var(--cubic-bounce);
 }
 
 
