@@ -245,6 +245,32 @@ body.nav-active {
 
 /* moves the download resume circle */
 
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-700);
+  margin-block-end: 20px;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  margin-block-end: 45px;
+}
+
+.text-lg {
+  font-family: var(--ff-syne);
+  font-size: var(--fs-1);
+}
+
+.layer-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # PRELOADER
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
