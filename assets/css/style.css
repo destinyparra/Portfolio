@@ -271,6 +271,32 @@ body.nav-active {
   z-index: 1;
 }
 
+.slider {
+  --slider-items: 1;
+  --item-gap: 12px;
+
+  margin-block-start: 60px;
+  overflow: hidden;
+}
+
+
+.slider-container {
+  position: relative;
+  display: flex;
+  gap: var(--item-gap);
+  transition: transform var(--cubic-ease-out);
+}
+
+/* allows to show only one whote flash card at a time */
+.slider-item {
+  --total-gap: calc(var(--item-gap) * (var(--slider-items)-1));
+
+  --item-width: calc((100% / var(--slider-items)) - var(--total-gap)/ (var(--slider-items)));
+
+  min-width: var(--item-width);
+  width: var(--item-width);
+}
+
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # PRELOADER
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
@@ -526,8 +552,88 @@ body.nav-active {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # SERVICE
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+.service-card {
+  position: relative;
+  background-color: var(--white);
+  height: 100%;
+  padding: 60px 40px 40px;
+  transition: var(--transition-2);
+}
+
+.service-card .card-icon ion-icon {
+  color: var(--content-color, var(--raisin-black));
+  font-size: 6rem;
+  --ionicon-stroke-width: 15px;
+}
+
+.service-card .card-title {
+  color: var(--content-color, var(--raisin-black));
+  margin-block: 20px;
+}
+
+.service-card .card-text {
+  color: var(--content-color);
+}
+
+.service-card .card-number {
+  margin-inline-start: auto;
+  font-weight: var(--fw-800);
+  line-height: 0.6;
+  max-width: max-content;
+  margin-block-start: 32px;
+  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+
+}
+
+.service-card:is(:hover, :focus-within) {
+  background-color: var(--raisin-black);
+  --content-color: var(--white);
+}
+
+.slider-control {
+  position: relative;
+  max-width: max-content;
+  padding-block: 8px;
+  opacity: 0.5;
+}
+
+.slider-control .line {
+  width: 30px;
+  height: 1px;
+  background-color: var(--white);
+
+}
+
+.slider-control .arrow {
+  position: absolute;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: var(--white);
+}
 
 
+.slider-control.prev .arrow {
+  left: 0;
+  border-width: 0 0 1px 1px;
+}
+
+.slider-control.next .arrow {
+  right: 0;
+  border-width: 1px 1px 0 0;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-block-start: 40px;
+
+}
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # SKILLS
