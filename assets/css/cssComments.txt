@@ -215,7 +215,7 @@ Using these selectors appropriately allows you to apply styles based on the hier
   # PORTFOLIO
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-
+Doing p.section-subtitle and enter/tab to autocomplete changes it to  ===> <p class "section-subtitle"></p>
 
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\

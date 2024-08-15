@@ -640,6 +640,37 @@ body.nav-active {
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 
+.skills .section-text {
+  margin-block-end: 20px;
+}
+
+.skills .btn {
+  margin-block: 45px;
+}
+
+.skills-list li:not(:last-child) {
+  margin-block-end: 30px;
+}
+
+.progress-wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--fw-700);
+  margin-block-end: 5px;
+}
+
+.progress-bg {
+  height: 6px;
+  background-color: var(--raisin-black);
+  border-radius: var(--radius-pill);
+}
+
+.progress {
+  height: inherit;
+  background-color: var(--white);
+  border-radius: inherit;
+}
+
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # PORTFOLIO
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
