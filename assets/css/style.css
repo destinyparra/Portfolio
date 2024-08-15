@@ -297,6 +297,19 @@ body.nav-active {
   width: var(--item-width);
 }
 
+.img-holder {
+
+  aspect-ratio: var(--width)/ var(--height);
+  background-color: var(--white_a5);
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # PRELOADER
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
@@ -674,6 +687,48 @@ body.nav-active {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # PORTFOLIO
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+
+.portfolio .slider {
+  --item-gap: 16px;
+}
+
+.portfolio-card {
+  position: relative;
+  background-color: transparent;
+  transition: var(--cubic-ease-out);
+}
+
+.portfolio-card .img-cover {
+  transition: var(--cubic-ease-out);
+}
+
+.portfolio-card .card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 100%;
+  transform: translate(-55%, -50%);
+  opacity: 0;
+  transition: var(--cubic-ease-out);
+  z-index: 1;
+}
+
+.portfolio-card .card-text {
+  color: var(--white);
+}
+
+.portfolio-card:is(:hover, :focus-within) .img-cover {
+  opacity: 0.1;
+  transform: scale(0.95);
+}
+
+.portfolio-card:is(:hover, :focus-within) .card-content {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
 
 
 
