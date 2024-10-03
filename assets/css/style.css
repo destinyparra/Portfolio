@@ -26,6 +26,19 @@ header {
   --white_a5: hsla(0, 0%, 100%, 0.05);
 
 
+  /* 
+   https://www.fffuel.co/cccolor/
+   
+
+   --raisin-black: hsl(162.35, 100%, 10%);
+   --roman-silver: hsla(229, 10%, 57%, 1);
+   --eerie-black: hsl(151.76, 100%, 6.67%);
+   --black: hsla(0, 0%, 0%, 1);
+   --white: hsla(158, 87%, 92%, 1);
+   --white_a10: hsla(0, 0%, 100%, 0.1);
+   --white_a5: hsla(0, 0%, 100%, 0.05); */
+
+
   /*-=-=-=-=-=-*\
      typography
   \*-=-=-=-=-=-*/
