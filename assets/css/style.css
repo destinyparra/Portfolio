@@ -300,15 +300,18 @@ body.nav-active {
   transition: transform var(--cubic-ease-out);
 }
 
-/* allows to show only one whote flash card at a time */
-.slider-item {
-  --total-gap: calc(var(--item-gap) * (var(--slider-items)-1));
 
-  --item-width: calc((100% / var(--slider-items)) - var(--total-gap)/ (var(--slider-items)));
+
+.slider-item {
+  --slider-items: 4;
+  /* Number of items shown at once */
+  --total-gap: calc(var(--item-gap) * (var(--slider-items) - 1));
+  --item-width: calc((100% / var(--slider-items)) - var(--total-gap) / var(--slider-items));
 
   min-width: var(--item-width);
-  width: var(--item-width);
+
 }
+
 
 .slider-control {
   position: relative;
@@ -625,7 +628,9 @@ body.nav-active {
   position: relative;
   background-color: var(--white);
   height: 100%;
-  padding: 60px 40px 40px;
+  width: 100%;
+  max-width: 400px;
+  padding: 60px 20px 20px;
   transition: var(--transition-2);
 }
 
@@ -642,6 +647,7 @@ body.nav-active {
 
 .service-card .card-text {
   color: var(--content-color);
+
 }
 
 .service-card .card-number {
