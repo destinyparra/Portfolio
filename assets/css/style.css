@@ -13,7 +13,7 @@ header {
 
 :root {
 
-/* 
+  /* 
   --fixed-header: ;
   --text-color: ;
   --background-color: ;
@@ -36,7 +36,7 @@ header {
 
 
   /* header and footer color  */
-  --fixed-header: hsla(231, 10%, 14%, 1);
+  /* --fixed-header: hsla(231, 10%, 14%, 1);
   --text-color: hsla(229, 10%, 57%, 1);
   --background-color: hsla(228, 9%, 10%, 1);
   --menu-color: rgb(0, 0, 0);
@@ -47,7 +47,21 @@ header {
   --a10-white: hsla(0, 0%, 100%, 0.1);
   --a5-white: hsla(0, 0%, 100%, 0.05);
   --test-color: hsla(355, 78%, 56%, 1);
-  --progress-bar: rgb(32, 174, 240);
+  --progress-bar: rgb(32, 174, 240); */
+
+
+  --fixed-header: rgb(96, 108, 56);
+  --text-color: rgb(255, 255, 255);
+  --background-color: rgb(40, 54, 24);
+  --menu-color: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --title-color: rgb(254, 250, 224);
+  --secondary-title: rgb(221, 161, 94);
+  --tile-color: rgb(254, 250, 224);
+  --a10-white: hsla(0, 0%, 100%, 0.1);
+  --a5-white: hsla(0, 0%, 100%, 0.05);
+  --test-color: hsla(355, 78%, 56%, 1);
+  --progress-bar: rgb(188, 108, 37);
 
 
 
@@ -684,7 +698,7 @@ body.nav-active {
 }
 
 .service-card .card-text {
-  color: var(--content-color);
+  color: var(--background-color);
 
 }
 
