@@ -13,35 +13,57 @@ header {
 
 :root {
 
+/* 
+  --fixed-header: ;
+  --text-color: ;
+  --background-color: ;
+  --menu-color: ;
+  --white: ;
+  --title-color: ;
+  --secondary-title: ;
+  --tile-color: ;
+  --a10-white: ;
+  --a5-white: ;
+  --test-color: ;
+  --progress-bar: ; */
+
+
+
   /*-=-=-=-=-=-*\
    custom colors
   \*-=-=-=-=-=-*/
 
-  --raisin-black: hsla(231, 10%, 14%, 1);
-  --roman-silver: hsla(229, 10%, 57%, 1);
-  --eerie-black: hsla(228, 9%, 10%, 1);
-  --black: hsla(0, 0%, 0%, 1);
-  --white: hsla(0, 0%, 100%, 1);
-  --white_a10: hsla(0, 0%, 100%, 0.1);
-  --white_a5: hsla(0, 0%, 100%, 0.05);
 
 
-  --deep-green: hsl(180, 35%, 15.69%, 1);
-  --dark-matcha: hsl(157.89, 12.93%, 28.82%, 1);
-  --matcha: hsl(128.18, 9.65%, 44.71%, 1);
-  --khaki: hsl(35.81, 43.06%, 71.76%, 1);
+  /* header and footer color  */
+  --fixed-header: hsla(231, 10%, 14%, 1);
+  --text-color: hsla(229, 10%, 57%, 1);
+  --background-color: hsla(228, 9%, 10%, 1);
+  --menu-color: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+  --title-color: hsla(28, 67%, 44%, 1);
+  --secondary-title: rgb(8, 214, 111);
+  --tile-color: hsla(74, 32%, 32%, 1);
+  --a10-white: hsla(0, 0%, 100%, 0.1);
+  --a5-white: hsla(0, 0%, 100%, 0.05);
+  --test-color: hsla(355, 78%, 56%, 1);
+  --progress-bar: rgb(32, 174, 240);
+
+
+
+
 
   /* 
    https://www.fffuel.co/cccolor/
    
 
-   --raisin-black: hsl(162.35, 100%, 10%);
-   --roman-silver: hsla(229, 10%, 57%, 1);
-   --eerie-black: hsl(151.76, 100%, 6.67%);
-   --black: hsla(0, 0%, 0%, 1);
+   --fixed-header: hsl(162.35, 100%, 10%);
+   --text-color: hsla(229, 10%, 57%, 1);
+   --background-color: hsl(151.76, 100%, 6.67%);
+   --menu-color: hsla(0, 0%, 0%, 1);
    --white: hsla(158, 87%, 92%, 1);
-   --white_a10: hsla(0, 0%, 100%, 0.1);
-   --white_a5: hsla(0, 0%, 100%, 0.05); */
+   --a10-white: hsla(0, 0%, 100%, 0.1);
+   --a5-white: hsla(0, 0%, 100%, 0.05); */
 
 
   /*-=-=-=-=-=-*\
@@ -146,8 +168,8 @@ html {
 
 
 body {
-  background-color: var(--eerie-black);
-  color: var(--roman-silver);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: 1.6rem;
   line-height: 1.75;
   overflow: hidden;
@@ -170,7 +192,7 @@ body.nav-active {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--white);
+  background-color: var(--title-color);
   border-radius: 20px;
 }
 
@@ -194,7 +216,7 @@ body.nav-active {
 .h1,
 .h2,
 .h4 {
-  color: var(--white);
+  color: var(--title-color);
   line-height: 1;
 }
 
@@ -203,7 +225,7 @@ body.nav-active {
 }
 
 .h3 {
-  color: var(--white);
+  color: var(--title-color);
   font-size: var(--fs-4);
   line-height: 1.5;
 }
@@ -234,7 +256,7 @@ body.nav-active {
 }
 
 .btn {
-  color: var(--white);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -251,7 +273,7 @@ body.nav-active {
   left: 0;
   transform: translateY(-50%);
   background-color: transparent;
-  border: 2px solid var(--white_a5);
+  border: 2px solid var(--a5-white);
   border-radius: var(--radius-circle);
   transition: var(--cubic-bounce);
 }
@@ -319,7 +341,7 @@ body.nav-active {
 
 
 .about-slider-item {
-  --slider-items: 6;
+  --slider-items: 3;
   /* Number of items shown at once */
   --total-gap: calc(var(--item-gap) * (var(--slider-items) - 1));
   --item-width: calc((100% / var(--slider-items)) - var(--total-gap) / var(--slider-items));
@@ -339,7 +361,7 @@ body.nav-active {
 .slider-control .line {
   width: 30px;
   height: 1px;
-  background-color: var(--white);
+  background-color: var(--text-color);
 
 }
 
@@ -349,7 +371,7 @@ body.nav-active {
   width: 10px;
   height: 10px;
   border-style: solid;
-  border-color: var(--white);
+  border-color: var(--text-color);
 }
 
 
@@ -375,7 +397,7 @@ body.nav-active {
 .img-holder {
 
   aspect-ratio: var(--width)/ var(--height);
-  background-color: var(--white_a5);
+  background-color: var(--a5-white);
   overflow: hidden;
 }
 
@@ -394,7 +416,7 @@ body.nav-active {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--eerie-black);
+  background-color: var(--background-color);
   z-index: 10;
   display: grid;
   place-items: center;
@@ -411,8 +433,8 @@ body.nav-active {
 .preloader .circle {
   width: 60px;
   height: 60px;
-  border: 2px solid var(--raisin-black);
-  border-top-color: var(--white);
+  border: 2px solid var(--fixed-header);
+  border-top-color: var(--title-color);
   border-radius: var(--radius-circle);
   animation: rotate360 1s linear infinite;
   transition: var(--transition-2);
@@ -443,14 +465,14 @@ body.nav-active {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--eerie-black);
+  background-color: var(--background-color);
   padding-block: 24px;
   z-index: 4;
   transition: var(--transition-1);
 }
 
 .header.active {
-  background-color: var(--raisin-black);
+  background-color: var(--fixed-header);
   padding-block: 16px;
 }
 
@@ -464,7 +486,7 @@ body.nav-active {
 .nav-toggle-btn {
   width: 50px;
   height: 50px;
-  background-color: var(--white);
+  background-color: var(--title-color);
   border-radius: var(--radius-circle);
   display: grid;
   place-content: center;
@@ -486,7 +508,7 @@ body.nav-active {
 .nav-toggle-btn .line {
   width: 25px;
   height: 2px;
-  background-color: var(--black);
+  background-color: var(--menu-color);
   transition: var(--transition-1);
 
 }
@@ -505,7 +527,7 @@ body.nav-active {
   right: -370px;
   max-width: 370px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--tile-color);
   height: 100vh;
   text-align: center;
   padding: 56px 40px;
@@ -522,7 +544,7 @@ body.nav-active {
 }
 
 .navbar-link {
-  color: var(--raisin-black);
+  color: var(--fixed-header);
   font-size: var(--fs-6);
   font-weight: var(--fw-700);
   padding-block: 10px;
@@ -530,7 +552,7 @@ body.nav-active {
 }
 
 .navbar-link:is(:hover, :focus-visible) {
-  text-shadow: 1px 0 0 var(--eerie-black);
+  text-shadow: 1px 0 0 var(--background-color);
 }
 
 .overlay {
@@ -568,7 +590,7 @@ body.nav-active {
   font-size: var(--fs-8);
   text-transform: uppercase;
   font-weight: var(--fw-700);
-  color: var(--white);
+  color: var(--secondary-title);
   letter-spacing: 2px;
   line-height: 1.5em;
   margin-block: 10px 30px;
@@ -642,7 +664,7 @@ body.nav-active {
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 .service-card {
   position: relative;
-  background-color: var(--white);
+  background-color: var(--tile-color);
   height: 100%;
   width: 100%;
   max-width: 400px;
@@ -651,13 +673,13 @@ body.nav-active {
 }
 
 .service-card .card-icon ion-icon {
-  color: var(--content-color, var(--raisin-black));
+  color: var(--content-color, var(--fixed-header));
   font-size: 6rem;
   --ionicon-stroke-width: 15px;
 }
 
 .service-card .card-title {
-  color: var(--content-color, var(--raisin-black));
+  color: var(--content-color, var(--fixed-header));
   margin-block: 20px;
 }
 
@@ -672,15 +694,15 @@ body.nav-active {
   line-height: 0.6;
   max-width: max-content;
   margin-block-start: 32px;
-  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-stroke: 1px var(--content-color, var(--menu-color));
   -webkit-text-fill-color: transparent;
   opacity: 0.3;
 
 }
 
 .service-card:is(:hover, :focus-within) {
-  background-color: var(--raisin-black);
-  --content-color: var(--white);
+  background-color: var(--fixed-header);
+  --content-color: var(--title-color);
 }
 
 /* .slider-control {
@@ -752,13 +774,13 @@ body.nav-active {
 
 .progress-bg {
   height: 6px;
-  background-color: var(--raisin-black);
+  background-color: var(--fixed-header);
   border-radius: var(--radius-pill);
 }
 
 .progress {
   height: inherit;
-  background-color: var(--white);
+  background-color: var(--progress-bar);
   border-radius: inherit;
 }
 
@@ -794,7 +816,7 @@ body.nav-active {
 }
 
 .portfolio-card .card-text {
-  color: var(--white);
+  color: var(--content-color);
 }
 
 .portfolio-card:is(:hover, :focus-within) .img-cover {
@@ -838,7 +860,7 @@ body.nav-active {
 }
 
 .blog-card .time .span {
-  color: var(--white);
+  color: var(--secondary-title);
   font-weight: var(--fw-700);
   line-height: 0.9;
 }
@@ -854,7 +876,7 @@ body.nav-active {
 
 
 .footer {
-  background-color: var(--raisin-black);
+  background-color: var(--fixed-header);
   padding-block: 76px;
 }
 
@@ -873,7 +895,7 @@ body.nav-active {
   height: 45px;
   display: grid;
   place-items: center;
-  border: 2px solid var(--white --white_a10);
+  border: 2px solid var(--white --a10-white);
   border-radius: var(--radius-circle);
   color: var(--white);
   transition: var(--transition-1);
@@ -1008,7 +1030,7 @@ body.nav-active {
 
   .hero-title,
   .hero-subtitle {
-    text-shadow: 2px 2px 0 var var(--eerie-black);
+    text-shadow: 2px 2px 0 var var(--background-color);
   }
 
 
