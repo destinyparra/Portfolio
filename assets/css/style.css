@@ -411,7 +411,7 @@ body.nav-active {
 .img-holder {
 
   aspect-ratio: var(--width)/ var(--height);
-  background-color: var(--a5-white);
+  /* background-color: var(--a5-white); */
   overflow: hidden;
 }
 
@@ -419,6 +419,10 @@ body.nav-active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+img {
+  border-radius: 50px;
 }
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
