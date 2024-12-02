@@ -152,3 +152,35 @@ const initSlider = function (currentSlider) {
 for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
 
 
+
+// For the hearts 
+let loveCounts = {
+    pspsps: 0,
+    pat: 0,
+    sss: 0,
+};
+
+function sendLove(type) {
+    // Increment the counter
+    loveCounts[type]++;
+    document.getElementById(`${type}-counter`).textContent = `${loveCounts[type]} ${type}`;
+
+    // Create the heart element
+    const heart = document.createElement('span');
+    heart.classList.add('heart');
+    heart.textContent = '❤️';
+
+    // Append heart to the button
+    const button = document.getElementById(`${type}-button`);
+    button.appendChild(heart);
+
+    // Position the heart above the button
+    heart.style.position = 'absolute';
+    heart.style.left = `${button.offsetWidth / 2 - 10}px`; // Center horizontally
+    heart.style.top = `-20px`; // Above the button
+
+    // Remove the heart after animation
+    heart.addEventListener('animationend', () => {
+        heart.remove();
+    });
+}
