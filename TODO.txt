@@ -6,3 +6,16 @@ cat animation for pats?
 Update skills and projects
 
 add more projects
+
+Projects currently included:
+Wompuh
+Brogle
+SVG animator
+
+projects to add:
+133 beans and rice to do list with weather api
+147 signease project 
+
+
+Future Projects to work on:
+
