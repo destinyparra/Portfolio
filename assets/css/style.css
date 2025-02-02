@@ -637,6 +637,10 @@ img {
   max-width: 400px;
   padding: 60px 20px 20px;
   transition: var(--transition-2);
+
+  max-height: 800px;
+  overflow: auto;
+  /*adds a scroll bar if needed*/
 }
 
 .service-card .card-icon ion-icon {
@@ -671,43 +675,6 @@ img {
   background-color: var(--fixed-header);
   --content-color: var(--title-color);
 }
-
-
-/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
-  # SKILLS
-\*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
-
-/* 
-.skills .section-text {
-  margin-block-end: 20px;
-}
-
-.skills .btn {
-  margin-block: 45px;
-}
-
-.skills-list li:not(:last-child) {
-  margin-block-end: 30px;
-}
-
-.progress-wrapper {
-  display: flex;
-  justify-content: space-between;
-  font-weight: var(--fw-700);
-  margin-block-end: 5px;
-}
-
-.progress-bg {
-  height: 6px;
-  background-color: var(--fixed-header);
-  border-radius: var(--radius-pill);
-}
-
-.progress {
-  height: inherit;
-  background-color: var(--progress-bar);
-  border-radius: inherit;
-} */
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # ABOUT ME
