@@ -2,30 +2,8 @@
   # CUSTOM PROPERTIES
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-/* 
-header {
-  background-color: #4CAF50;
-  background-color: #325833cf;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-} */
 
 :root {
-
-  /* 
-  --fixed-header: ;
-  --text-color: ;
-  --background-color: ;
-  --menu-color: ;
-  --white: ;
-  --title-color: ;
-  --secondary-title: ;
-  --tile-color: ;
-  --a10-white: ;
-  --a5-white: ;
-  --test-color: ;
-  --progress-bar: ; */
 
 
 
@@ -33,21 +11,6 @@ header {
    custom colors
   \*-=-=-=-=-=-*/
 
-
-
-  /* header and footer color  */
-  /* --fixed-header: hsla(231, 10%, 14%, 1);
-  --text-color: hsla(229, 10%, 57%, 1);
-  --background-color: hsla(228, 9%, 10%, 1);
-  --menu-color: rgb(0, 0, 0);
-  --white: rgb(255, 255, 255);
-  --title-color: hsla(28, 67%, 44%, 1);
-  --secondary-title: rgb(8, 214, 111);
-  --tile-color: hsla(74, 32%, 32%, 1);
-  --a10-white: hsla(0, 0%, 100%, 0.1);
-  --a5-white: hsla(0, 0%, 100%, 0.05);
-  --test-color: hsla(355, 78%, 56%, 1);
-  --progress-bar: rgb(32, 174, 240); */
 
 
   --fixed-header: rgb(96, 108, 56);
@@ -65,19 +28,6 @@ header {
 
 
 
-
-
-  /* 
-   https://www.fffuel.co/cccolor/
-   
-
-   --fixed-header: hsl(162.35, 100%, 10%);
-   --text-color: hsla(229, 10%, 57%, 1);
-   --background-color: hsl(151.76, 100%, 6.67%);
-   --menu-color: hsla(0, 0%, 0%, 1);
-   --white: hsla(158, 87%, 92%, 1);
-   --a10-white: hsla(0, 0%, 100%, 0.1);
-   --a5-white: hsla(0, 0%, 100%, 0.05); */
 
 
   /*-=-=-=-=-=-*\
@@ -275,7 +225,6 @@ body.nav-active {
   align-items: center;
   gap: 4px;
   max-width: max-content;
-  min-width: max-content;
   padding: 20px 32px;
 }
 
@@ -723,54 +672,12 @@ img {
   --content-color: var(--title-color);
 }
 
-/* .slider-control {
-  position: relative;
-  max-width: max-content;
-  padding-block: 8px;
-  opacity: 0.5;
-}
-
-.slider-control .line {
-  width: 30px;
-  height: 1px;
-  background-color: var(--white);
-
-}
-
-.slider-control .arrow {
-  position: absolute;
-  transform: translateY(-50%) rotate(45deg);
-  width: 10px;
-  height: 10px;
-  border-style: solid;
-  border-color: var(--white);
-}
-
-
-.slider-control.prev .arrow {
-  left: 0;
-  border-width: 0 0 1px 1px;
-}
-
-.slider-control.next .arrow {
-  right: 0;
-  border-width: 1px 1px 0 0;
-}
-
-.slider-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  margin-block-start: 40px;
-
-} */
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # SKILLS
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
-
+/* 
 .skills .section-text {
   margin-block-end: 20px;
 }
@@ -800,10 +707,10 @@ img {
   height: inherit;
   background-color: var(--progress-bar);
   border-radius: inherit;
-}
+} */
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
-  # PORTFOLIO
+  # ABOUT ME
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 
@@ -848,11 +755,8 @@ img {
 }
 
 
-
-
-
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
-  # BLOG
+  # PROJECTS / BLOG
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 
 .blog-list {

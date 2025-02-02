@@ -11,6 +11,7 @@ Projects currently included:
 Wompuh
 Brogle
 SVG animator
+Clubs
 
 projects to add:
 133 beans and rice to do list with weather api
