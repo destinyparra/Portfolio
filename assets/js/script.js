@@ -18,10 +18,22 @@ const addEventOnElements = function (elements, eventType, callback) {
  * PRELOADER
  */
 
-const preloader = document.querySelector("[data-preloader]");
+// const preloader = document.querySelector("[data-preloader]");
 
+// window.addEventListener("DOMContentLoaded", function () {
+//     preloader.classList.add("loaded");
+//     document.body.classList.add("loaded");
+// });
+
+
+/**
+ * PRELOADER
+ */
 window.addEventListener("DOMContentLoaded", function () {
-    preloader.classList.add("loaded");
+    const preloader = document.querySelector("[data-preloader]"); // ✅ Query selector inside event listener
+    if (preloader) {  // ✅ Check if preloader exists before using it
+        preloader.classList.add("loaded");
+    }
     document.body.classList.add("loaded");
 });
 
@@ -184,3 +196,61 @@ function sendLove(type) {
         heart.remove();
     });
 }
+
+
+
+
+// TYPING PAGE 
+// API
+
+const RANDOM_QUOTE_API_URL = 'https://quoteslate.vercel.app/api/quotes/random';
+const quoteDisplayElement = document.getElementById('quoteDisplay');
+const quoteInputElement = document.getElementById('quoteInput');
+
+quoteInputElement.addEventListener('input', () => {
+    const arrayQuote = quoteDisplayElement.querySelectorAll('span');
+    const arrayValue = quoteInputElement.value.split(''); // Split the input value into an array of characters
+    arrayQuote.forEach((characterSpan, index) => {
+        const character = arrayValue[index]; // Get the character from the input value
+        if (character == null) { // If the character has not been typed yet
+            characterSpan.classList.remove('correct');
+            characterSpan.classList.remove('incorrect');
+        }
+
+        if (character === characterSpan.innerText) {
+            characterSpan.classList.add('correct');
+            characterSpan.classList.remove('incorrect');
+        } else { // If the character is incorrect
+            characterSpan.classList.remove('correct');
+            characterSpan.classList.add('incorrect');
+        }
+    })
+}); // Event listener for input field
+
+async function getRandomQuote() {
+    try {
+        const response = await fetch(RANDOM_QUOTE_API_URL);
+        const data = await response.json();
+        console.log(data); // Debugging: Check API response structure
+
+        // Ensure correct data extraction based on API response
+        return data.quote || data.content || "No quote found";
+    } catch (error) {
+        console.error("Error fetching quote:", error);
+        return "Failed to load quote.";
+    }
+}
+
+async function renderNewQuote() {
+    const quote = await getRandomQuote();
+    quoteDisplayElement.innerHTML = ''; // Clear the previous quote
+    quote.split('').forEach(character => {
+        const characterSpan = document.createElement('span');
+        characterSpan.innerText = character;
+        quoteDisplayElement.appendChild(characterSpan);
+    });
+
+    quoteInputElement.value = null; // Clear the input field
+}
+
+renderNewQuote();

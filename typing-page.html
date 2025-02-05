@@ -25,10 +25,10 @@
     <link rel="preload" as="image" href="assets/images/scaledImage.jpeg">
 
 
-    <title>New Page</title>
+    <title>Speed Typing Test</title>
 </head>
 
-<body class="new-page">
+<body class="typing-page-body">
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -36,7 +36,7 @@
 
                 <nav class="navbar">
                     <a href="index.html" class="navbar-link">Home</a>
-                    <a href="new-page.html" class="navbar-link">New Page</a>
+                    <!-- <a href="typing-page.html" class="navbar-link">New Page</a> -->
                 </nav>
         </div>
     </header>
@@ -44,13 +44,29 @@
 
     <main>
         <section class="container">
-            <h1 class="section-title">New Page Title</h1>
+            <h1 class="section-title">Try my WordRacer Test!</h1>
             <div class="section-content">
-                <p>This is the content of the new page.</p>
+                <p>The WORLDS HARDEST TYPING CHALLENGE!</p>
             </div>
+            <div class="timer" id="timer">0</div>
+            <div class="typing-page-container">
+                <div class="quote-display" id="quoteDisplay">Loading quote...</div>
+                <textarea id="quoteInput" class="quote-input" autofocus></textarea>
+
+            </div>
+
+
         </section>
     </main>
 
+
+
+
+
+
+
+
+    <!-- FOOTER -->
 
     <footer class="footer">
         <div class="container">
@@ -79,27 +95,6 @@
 
             <ul class="social-list">
 
-                <!-- <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-dribbble"> </ion-icon>
-
-                    </a>
-                </li> -->
-
-                <!-- <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-instagram"> </ion-icon>
-
-                    </a>
-                </li> -->
-
-                <!-- <li>
-                    <a href="#" class="social-link">
-                        <ion-icon name="logo-skype"> </ion-icon>
-
-                    </a>
-                </li> -->
-
                 <li>
                     <a href="https://www.linkedin.com/in/destiny-nunez-parra/" class="social-link" target="_blank">
                         <ion-icon name="logo-linkedin"></ion-icon>
@@ -115,10 +110,7 @@
 
 
 
-    <!--
-        - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
+
 
 
     <!--
@@ -126,6 +118,11 @@
     -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--
+        - custom js link
+    -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
