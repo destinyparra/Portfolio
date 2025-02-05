@@ -183,6 +183,14 @@ main {
   padding-block: var(--section-padding);
 }
 
+.section.project {
+  padding-block-end: 50px; /* Reduce bottom padding */
+}
+
+.section.research {
+  padding-block-start: 50px; /* Reduce top padding */
+}
+
 .h1 {
   font-size: var(--fs-3);
   font-weight: var(--fw-800);
@@ -1296,3 +1304,19 @@ img {
   font-family: var(--ff-syne);
   text-align: center;
 }  */
+
+
+.research-item {
+  display: flex;
+  align-items: center;
+}
+
+.research-item img {
+  max-width: 75%;
+  height: auto;
+}
+
+.research-description {
+  max-width: 100%;
+  padding-left: 10px;
+}
