@@ -221,7 +221,7 @@ quoteInputElement.addEventListener('input', () => {
             correct = false;
         }
 
-        if (character === characterSpan.innerText) {
+        else if (character === characterSpan.innerText) {
             characterSpan.classList.add('correct');
             characterSpan.classList.remove('incorrect');
 
