@@ -203,28 +203,35 @@ function sendLove(type) {
 // TYPING PAGE 
 // API
 
-const RANDOM_QUOTE_API_URL = 'https://quoteslate.vercel.app/api/quotes/random';
-const quoteDisplayElement = document.getElementById('quoteDisplay');
-const quoteInputElement = document.getElementById('quoteInput');
+const RANDOM_QUOTE_API_URL = 'https://quoteslate.vercel.app/api/quotes/random'; // API URL
+const quoteDisplayElement = document.getElementById('quoteDisplay'); // Quote display element
+const quoteInputElement = document.getElementById('quoteInput'); // Input field element
+const timerElement = document.getElementById('timer'); // Timer element 
 
 quoteInputElement.addEventListener('input', () => {
     const arrayQuote = quoteDisplayElement.querySelectorAll('span');
     const arrayValue = quoteInputElement.value.split(''); // Split the input value into an array of characters
+
+    let correct = true;
     arrayQuote.forEach((characterSpan, index) => {
         const character = arrayValue[index]; // Get the character from the input value
         if (character == null) { // If the character has not been typed yet
             characterSpan.classList.remove('correct');
             characterSpan.classList.remove('incorrect');
+            correct = false;
         }
 
         if (character === characterSpan.innerText) {
             characterSpan.classList.add('correct');
             characterSpan.classList.remove('incorrect');
+
         } else { // If the character is incorrect
             characterSpan.classList.remove('correct');
             characterSpan.classList.add('incorrect');
+            correct = false;
         }
     })
+    if (correct) renderNewQuote(); // If the input is correct, get a new quote
 }); // Event listener for input field
 
 async function getRandomQuote() {
@@ -251,6 +258,24 @@ async function renderNewQuote() {
     });
 
     quoteInputElement.value = null; // Clear the input field
+    startTimer(); // Start the timer everytime we render a new quote
+}
+
+
+let startTime; // Start time for timer
+function startTimer() {
+    timerElement.innerText = 0;
+    startTime = new Date(); // Get the current time
+    setInterval(() => {
+        timer.innerText = getTimerTime();
+
+    }, 1000)
+
+
+}
+
+function getTimerTime() {
+    return Math.floor((new Date() - startTime) / 1000); // Calculate the time elapsed since the start time and round down
 }
 
 renderNewQuote();
