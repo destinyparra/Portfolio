@@ -33,38 +33,60 @@
         <div class="container">
             <a href="index.html" class="logo">
                 <img src="assets/images/DNPlogo-removebg-preview.svg" width="60" height="50" alt="portfolio home">
+            </a>
 
-                <nav class="navbar">
-                    <a href="index.html" class="navbar-link">Home</a>
-                    <!-- <a href="typing-page.html" class="navbar-link">New Page</a> -->
-                </nav>
+
+            <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+
+                    <li>
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+
+
+
+
+                </ul>
+            </nav>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
         </div>
     </header>
 
-
-    <main>
+    <main class="typing-page-main">
         <section class="container">
             <h1 class="section-title">Try my WordRacer Test!</h1>
             <div class="section-content">
-                <p>The WORLDS HARDEST TYPING CHALLENGE!</p>
+                <p>Endless typing test</p>
             </div>
             <div class="timer" id="timer"></div>
             <div class="typing-page-container">
                 <div class="quote-display" id="quoteDisplay">Loading quote...</div>
                 <textarea id="quoteInput" class="quote-input" autofocus></textarea>
-
             </div>
-
-
+            <div id="pet-buttons">
+                <button id="pspsps-button" onclick="sendLove('pspsps')">
+                    Send a pspsps to Max and Faith
+                </button>
+                <button id="pat-button" onclick="sendLove('pat')">
+                    Send a pat to Daisy
+                </button>
+                <button id="sss-button" onclick="sendLove('sss')">
+                    Send a sssSssSSs to Mr. Snake
+                </button>
+            </div>
+            <div id="love-counters">
+                <p id="pspsps-counter">0 pspsps</p>
+                <p id="pat-counter">0 pats</p>
+                <p id="sss-counter">0 sssSssSSs</p>
+            </div>
         </section>
     </main>
-
-
-
-
-
-
-
 
     <!-- FOOTER -->
 
@@ -107,21 +129,11 @@
         </div>
     </footer>
 
-
-
-
-
-
-
-    <!--
-        - ionicon link
-    -->
+    <!-- ionicon link -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!--
-        - custom js link
-    -->
+    <!-- custom js link -->
     <script src="./assets/js/script.js"></script>
 </body>
 

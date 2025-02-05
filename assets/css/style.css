@@ -131,8 +131,8 @@ html {
   font-family: var(--ff-roboto);
   font-size: 10px;
   scroll-behavior: smooth;
+  height: 100%;
 }
-
 
 body {
   background-color: var(--background-color);
@@ -140,6 +140,9 @@ body {
   font-size: 1.6rem;
   line-height: 1.75;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 body.loaded {
@@ -148,6 +151,11 @@ body.loaded {
 
 body.nav-active {
   overflow: hidden;
+}
+
+main {
+  flex: 1;
+  /* padding-top: 80px; Adjust this value based on the height of your navbar */
 }
 
 ::-webkit-scrollbar {
@@ -775,6 +783,7 @@ img {
 
 
 .footer {
+  width: 100%;
   background-color: var(--fixed-header);
   padding-block: 76px;
 }
@@ -782,6 +791,7 @@ img {
 .footer .container {
   display: grid;
   gap: 20px;
+  width: 100%;
 }
 
 .social-list {
@@ -1118,13 +1128,22 @@ img {
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  color: var(--text-color);
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #pet-buttons button:hover {
   background-color: #ffa1a1;
   transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#pet-buttons button:active {
+  transform: scale(1.05);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #love-counters {
@@ -1185,6 +1204,15 @@ img {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # TYPING PAGE
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.typing-page-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+}
 
 .typing-page-body {
   display: flex;

@@ -208,7 +208,15 @@ const quoteDisplayElement = document.getElementById('quoteDisplay'); // Quote di
 const quoteInputElement = document.getElementById('quoteInput'); // Input field element
 const timerElement = document.getElementById('timer'); // Timer element 
 
+let timerStarted = false; // Flag to check if the timer has started
+let timerInterval; // Variable to store the timer interval
+
 quoteInputElement.addEventListener('input', () => {
+    if (!timerStarted) {
+        startTimer(); // Start the timer on the first input
+        timerStarted = true; // Set the flag to true
+    }
+
     const arrayQuote = quoteDisplayElement.querySelectorAll('span');
     const arrayValue = quoteInputElement.value.split(''); // Split the input value into an array of characters
 
@@ -231,7 +239,10 @@ quoteInputElement.addEventListener('input', () => {
             correct = false;
         }
     })
-    if (correct) renderNewQuote(); // If the input is correct, get a new quote
+    if (correct) {
+        renderNewQuote(); // If the input is correct, get a new quote
+        timerStarted = false; // Reset the timer flag for the next quote
+    }
 }); // Event listener for input field
 
 async function getRandomQuote() {
@@ -258,20 +269,18 @@ async function renderNewQuote() {
     });
 
     quoteInputElement.value = null; // Clear the input field
-    startTimer(); // Start the timer everytime we render a new quote
+    timerElement.innerText = 0; // Reset the timer display
+    clearInterval(timerInterval); // Clear the existing timer interval
 }
 
 
 let startTime; // Start time for timer
 function startTimer() {
-    timerElement.innerText = 0;
     startTime = new Date(); // Get the current time
-    setInterval(() => {
-        timer.innerText = getTimerTime();
+    timerInterval = setInterval(() => {
+        timerElement.innerText = getTimerTime();
 
     }, 1000)
-
-
 }
 
 function getTimerTime() {
