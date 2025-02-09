@@ -288,3 +288,22 @@ function getTimerTime() {
 }
 
 renderNewQuote();
+
+/**
+ * Smooth scroll to section with header offset
+ */
+function scrollToSection(event, sectionId) {
+    event.preventDefault();
+    const headerHeight = document.getElementById('header').offsetHeight;
+    const section = document.getElementById(sectionId);
+    const sectionPosition = section.offsetTop - headerHeight;
+
+    window.scrollTo({
+        top: sectionPosition,
+        behavior: 'smooth'
+    });
+}
+
+
+
+

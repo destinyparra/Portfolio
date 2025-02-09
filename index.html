@@ -62,7 +62,7 @@
         - #HEADER
     -->
 
-    <header class="header" data-header>
+    <header class="header" data-header id="header">
         <div class="container">
             <a href="#" class="logo">
                 <img src="assets/images/DNPlogo-removebg-preview.svg" width="60" height="50" alt="portfolio home">
@@ -77,15 +77,24 @@
                 <ul class="navbar-list">
 
                     <li>
-                        <a href="#home" class="navbar-link">Home</a>
+                        <a href="#home" class="navbar-link" onclick="scrollToSection(event, 'home')">Home</a>
                     </li>
 
                     <li>
-                        <a href="#about-me" class="navbar-link">About Me</a>
+                        <a href="#about-me" class="navbar-link" onclick="scrollToSection(event, 'about-me')">About
+                            Me</a>
                     </li>
 
                     <li>
-                        <a href="#project-label" class="navbar-link">Projects</a>
+                        <a href="#project-label" class="navbar-link"
+                            onclick="scrollToSection(event, 'project-label')">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#research" class="navbar-link"
+                            onclick="scrollToSection(event, 'research')">Research</a>
+                    </li>
+                    <li>
+                        <a href="#article" class="navbar-link" onclick="scrollToSection(event, 'article')">Articles</a>
                     </li>
                     <li>
                         <a href="typing-page.html" class="navbar-link">Speed Typing Test</a>
