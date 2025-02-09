@@ -184,11 +184,18 @@ main {
 }
 
 .section.project {
-  padding-block-end: 50px; /* Reduce bottom padding */
+  padding-block-end: 50px;
+  /* Reduce bottom padding */
 }
 
 .section.research {
-  padding-block-start: 50px; /* Reduce top padding */
+  padding-block-start: 50px;
+  /* Reduce top padding */
+}
+
+.section.articles {
+  padding-block-start: 20px;
+  /* Reduce top padding */
 }
 
 .h1 {
@@ -1306,6 +1313,13 @@ img {
 }  */
 
 
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
+  # RESEARCH
+\*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+
+
 .research-item {
   display: flex;
   align-items: center;
@@ -1319,4 +1333,31 @@ img {
 .research-description {
   max-width: 100%;
   padding-left: 10px;
+}
+
+
+
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
+  # ARTICLES
+\*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.article-card {
+  display: grid;
+  gap: 20px;
+}
+
+.article-card .card-content {
+  display: flex;
+  gap: 16px;
+  padding-inline: 16px;
+}
+
+/* 
+.article-description {
+  margin-block: 10px;
+} */
+
+.article-h3 {
+  font-size: var(--fs-4);
+  margin-block: 10px;
 }
