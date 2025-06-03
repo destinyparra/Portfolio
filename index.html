@@ -111,7 +111,7 @@
                         <a href="typing-page.html" class="navbar-link">Speed Typing Test</a>
                     </li> -->
                     <li>
-                        <a href="#model-label" class="navbar-link">CAD</a>
+                        <a href="#model-label" class="navbar-link"  onclick="scrollToSection(event, 'model-label')">CAD</a>
                     </li>
 
 
@@ -990,7 +990,7 @@
             <div class="container">
             <h2 class="h2 section-title">3D CAD Projects</h2>
         
-            <p class="section-text">A self-hosted 3D render of my progress using Fusion 360:</p>
+            <p class="section-text">A self-hosted 3D render of my progress using Fusion 360</p>
             <model-viewer class="model-viewer-size" id ="reveal" loading="eager" camera-controls touch-action="pan-y, pan-x"  tone-mapping="aces" src="./assets/models/block.glb" auto-rotate
                             camera-controls shadow-intensity="1" rotation-per-second="30deg"
         alt="A 3D model of a block"></model-viewer>
