@@ -1362,3 +1362,11 @@ img {
   font-size: var(--fs-4);
   margin-block: 10px;
 }
+
+
+/* Model */
+.model-viewer-size {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
