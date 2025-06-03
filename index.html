@@ -19,7 +19,7 @@
     <!--
     favicon
 -->
-    <link rel="shortcut icon" href="assets/images/DNPlogo.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./assets/images/DNPlogo.svg" type="image/svg+xml">
 
 
     <!-- 
@@ -43,7 +43,13 @@
     <!-- 
     - preload images
   -->
-    <link rel="preload" as="image" href="assets/images/scaledImage.jpeg">
+    <!-- <link rel="preload" as="image" href="./assets/images/scaledImage.jpeg"> -->
+
+        <!-- 
+        - Model Viewer Link 
+    -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+   
 
 </head>
 
@@ -65,7 +71,7 @@
     <header class="header" data-header id="header">
         <div class="container">
             <a href="#" class="logo">
-                <img src="assets/images/DNPlogo-removebg-preview.svg" width="60" height="50" alt="portfolio home">
+                <img src="./assets/images/DNPlogo-removebg-preview.svg" width="60" height="50" alt="portfolio home">
             </a>
 
             <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
@@ -101,8 +107,11 @@
                     <li>
                         <a href="#article" class="navbar-link" onclick="scrollToSection(event, 'article')">Articles</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="typing-page.html" class="navbar-link">Speed Typing Test</a>
+                    </li> -->
+                    <li>
+                        <a href="#model-label" class="navbar-link">CAD</a>
                     </li>
 
 
@@ -137,7 +146,7 @@
                         </p>
 
                         <div class="hero-banner">
-                            <img src="assets/images/gradPicScreenshot.png" width="700" height="800" alt="destiny parra"
+                            <img src="./assets/images/gradPicScreenshot.png" width="700" height="800" alt="destiny parra"
                                 class="w-100">
                         </div>
 
@@ -145,7 +154,7 @@
                             Hello, I am Destiny Parra and I am a Fullstack Developer with a passion for creating
                         </p>
 
-                        <a href="assets/Files/DestinyNunezParra_Resume.pdf" class="btn has-before" download="Resume"
+                        <a href="./assets/Files/DestinyNunezParra_Resume.pdf" class="btn has-before" download="Resume"
                             target="_blank">
                             <span class="span">Download Resume</span>
                             <!-- <button type="button">Download</button> -->
@@ -673,7 +682,7 @@
                         <li>
                             <div class="project-card">
                                 <figure class="card-banner img-holder" style="--width: ; --height: ;">
-                                    <img src="assets/images/SignEase.png" class="responsive-img" loading="lazy"
+                                    <img src="./assets/images/SignEase.png" class="responsive-img" loading="lazy"
                                         alt="Image of Search Engine Brogle" class="img-cover">
 
                                 </figure>
@@ -787,7 +796,7 @@
                         <li>
                             <div class="project-card">
                                 <figure class="card-banner img-holder" style="--width: ; --height: ;">
-                                    <img src="assets/images/BeansandRiceLight.png" class="responsive-img" loading="lazy"
+                                    <img src="./assets/images/BeansandRiceLight.png" class="responsive-img" loading="lazy"
                                         alt="Image of Search Engine Brogle" class="img-cover">
 
                                 </figure>
@@ -840,7 +849,7 @@
                         <li>
                             <div class="project-card">
                                 <figure class="card-banner img-holder" style="--width: ; --height: ;">
-                                    <img src="assets/images/clubslogo.png" class="responsive-img" loading="lazy"
+                                    <img src="./assets/images/clubslogo.png" class="responsive-img" loading="lazy"
                                         alt="Description of the image">
 
                                 </figure>
@@ -876,7 +885,7 @@
                         <li>
                             <div class="project-card">
                                 <figure class="card-banner img-holder" style="--width: ; --height: ;">
-                                    <img src="assets/images/Yapify_logo.png" class="responsive-img" loading="lazy"
+                                    <img src="./assets/images/Yapify_logo.png" class="responsive-img" loading="lazy"
                                         alt="Description of the image">
 
                                 </figure>
@@ -923,7 +932,7 @@
                     <div class="research-item">
 
                         <li class="slider-item">
-                            <img src="assets/images/bostonPoster.jpg" alt="Research Image 1" class="img-cover-research">
+                            <img src="./assets/images/bostonPoster.jpg" alt="Research Image 1" class="img-cover-research">
                         </li>
 
                         <div class="research-description">
@@ -976,6 +985,20 @@
                 </div>
             </section>
 
+        <!-- 3D Models view -->
+        <section class="section" id="model-label" aria-labelledby="model-label">
+            <div class="container">
+            <h2 class="h2 section-title">3D CAD Projects</h2>
+        
+            <p class="section-text">A self-hosted 3D render of my progress using Fusion 360:</p>
+            <model-viewer class="model-viewer-size" id ="reveal" loading="eager" camera-controls touch-action="pan-y, pan-x"  tone-mapping="aces" src="./assets/models/block.glb" auto-rotate
+                            camera-controls shadow-intensity="1" rotation-per-second="30deg"
+        alt="A 3D model of a block"></model-viewer>
+
+    </div>
+  </section>
+  
+
         </article>
     </main>
 
@@ -1025,7 +1048,6 @@
         </div>
     </footer>
 
-
     <!--
         - custom js link
     -->
@@ -1037,7 +1059,7 @@
     -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
+
 
 </html>

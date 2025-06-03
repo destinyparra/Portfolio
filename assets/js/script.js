@@ -198,96 +198,94 @@ function sendLove(type) {
 }
 
 
+// // TYPING PAGE 
+// // API
+
+// const RANDOM_QUOTE_API_URL = 'https://quoteslate.vercel.app/api/quotes/random'; // API URL
+// const quoteDisplayElement = document.getElementById('quoteDisplay'); // Quote display element
+// const quoteInputElement = document.getElementById('quoteInput'); // Input field element
+// const timerElement = document.getElementById('timer'); // Timer element 
+
+// let timerStarted = false; // Flag to check if the timer has started
+// let timerInterval; // Variable to store the timer interval
+
+// quoteInputElement.addEventListener('input', () => {
+//     if (!timerStarted) {
+//         startTimer(); // Start the timer on the first input
+//         timerStarted = true; // Set the flag to true
+//     }
+
+//     const arrayQuote = quoteDisplayElement.querySelectorAll('span');
+//     const arrayValue = quoteInputElement.value.split(''); // Split the input value into an array of characters
+
+//     let correct = true;
+//     arrayQuote.forEach((characterSpan, index) => {
+//         const character = arrayValue[index]; // Get the character from the input value
+//         if (character == null) { // If the character has not been typed yet
+//             characterSpan.classList.remove('correct');
+//             characterSpan.classList.remove('incorrect');
+//             correct = false;
+//         }
+
+//         else if (character === characterSpan.innerText) {
+//             characterSpan.classList.add('correct');
+//             characterSpan.classList.remove('incorrect');
+
+//         } else { // If the character is incorrect
+//             characterSpan.classList.remove('correct');
+//             characterSpan.classList.add('incorrect');
+//             correct = false;
+//         }
+//     })
+//     if (correct) {
+//         renderNewQuote(); // If the input is correct, get a new quote
+//         timerStarted = false; // Reset the timer flag for the next quote
+//     }
+// }); // Event listener for input field
+
+// async function getRandomQuote() {
+//     try {
+//         const response = await fetch(RANDOM_QUOTE_API_URL);
+//         const data = await response.json();
+//         console.log(data); // Debugging: Check API response structure
+
+//         // Ensure correct data extraction based on API response
+//         return data.quote || data.content || "No quote found";
+//     } catch (error) {
+//         console.error("Error fetching quote:", error);
+//         return "Failed to load quote.";
+//     }
+// }
+
+// async function renderNewQuote() {
+//     const quote = await getRandomQuote();
+//     quoteDisplayElement.innerHTML = ''; // Clear the previous quote
+//     quote.split('').forEach(character => {
+//         const characterSpan = document.createElement('span');
+//         characterSpan.innerText = character;
+//         quoteDisplayElement.appendChild(characterSpan);
+//     });
+
+//     quoteInputElement.value = null; // Clear the input field
+//     timerElement.innerText = 0; // Reset the timer display
+//     clearInterval(timerInterval); // Clear the existing timer interval
+// }
 
 
-// TYPING PAGE 
-// API
+// let startTime; // Start time for timer
+// function startTimer() {
+//     startTime = new Date(); // Get the current time
+//     timerInterval = setInterval(() => {
+//         timerElement.innerText = getTimerTime();
 
-const RANDOM_QUOTE_API_URL = 'https://quoteslate.vercel.app/api/quotes/random'; // API URL
-const quoteDisplayElement = document.getElementById('quoteDisplay'); // Quote display element
-const quoteInputElement = document.getElementById('quoteInput'); // Input field element
-const timerElement = document.getElementById('timer'); // Timer element 
+//     }, 1000)
+// }
 
-let timerStarted = false; // Flag to check if the timer has started
-let timerInterval; // Variable to store the timer interval
+// function getTimerTime() {
+//     return Math.floor((new Date() - startTime) / 1000); // Calculate the time elapsed since the start time and round down
+// }
 
-quoteInputElement.addEventListener('input', () => {
-    if (!timerStarted) {
-        startTimer(); // Start the timer on the first input
-        timerStarted = true; // Set the flag to true
-    }
-
-    const arrayQuote = quoteDisplayElement.querySelectorAll('span');
-    const arrayValue = quoteInputElement.value.split(''); // Split the input value into an array of characters
-
-    let correct = true;
-    arrayQuote.forEach((characterSpan, index) => {
-        const character = arrayValue[index]; // Get the character from the input value
-        if (character == null) { // If the character has not been typed yet
-            characterSpan.classList.remove('correct');
-            characterSpan.classList.remove('incorrect');
-            correct = false;
-        }
-
-        else if (character === characterSpan.innerText) {
-            characterSpan.classList.add('correct');
-            characterSpan.classList.remove('incorrect');
-
-        } else { // If the character is incorrect
-            characterSpan.classList.remove('correct');
-            characterSpan.classList.add('incorrect');
-            correct = false;
-        }
-    })
-    if (correct) {
-        renderNewQuote(); // If the input is correct, get a new quote
-        timerStarted = false; // Reset the timer flag for the next quote
-    }
-}); // Event listener for input field
-
-async function getRandomQuote() {
-    try {
-        const response = await fetch(RANDOM_QUOTE_API_URL);
-        const data = await response.json();
-        console.log(data); // Debugging: Check API response structure
-
-        // Ensure correct data extraction based on API response
-        return data.quote || data.content || "No quote found";
-    } catch (error) {
-        console.error("Error fetching quote:", error);
-        return "Failed to load quote.";
-    }
-}
-
-async function renderNewQuote() {
-    const quote = await getRandomQuote();
-    quoteDisplayElement.innerHTML = ''; // Clear the previous quote
-    quote.split('').forEach(character => {
-        const characterSpan = document.createElement('span');
-        characterSpan.innerText = character;
-        quoteDisplayElement.appendChild(characterSpan);
-    });
-
-    quoteInputElement.value = null; // Clear the input field
-    timerElement.innerText = 0; // Reset the timer display
-    clearInterval(timerInterval); // Clear the existing timer interval
-}
-
-
-let startTime; // Start time for timer
-function startTimer() {
-    startTime = new Date(); // Get the current time
-    timerInterval = setInterval(() => {
-        timerElement.innerText = getTimerTime();
-
-    }, 1000)
-}
-
-function getTimerTime() {
-    return Math.floor((new Date() - startTime) / 1000); // Calculate the time elapsed since the start time and round down
-}
-
-renderNewQuote();
+// renderNewQuote();
 
 /**
  * Smooth scroll to section with header offset
