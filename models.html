@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D CAD Projects</title>
+        <link rel="stylesheet" href="./assets/css/style.css"> 
+    <!-- 
+        - Model Viewer Link 
+    -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+   
+    </head>
+
+    <body>
+        <header class ="header">
+        <!-- 3D Models view -->
+            <div class="container">
+            <a href="index.html" class ="logo">
+                <img src="./assets/images/DNPlogo-removebg-preview.svg" width="60" height="50" alt="portfolio home">
+            </a>
+
+            <nav class="navbar">
+                <ul class = "navbar-list">
+                    <li><a href="index.html" class = "navbar-link">Back to Home</a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class ="section" id="model-label" aria-labelledby="model-label">
+                <div class="container">
+                    <h2 class ="h2 section-title">3D CAD Projects</h2>
+                    <p class="section-text">Explore my 3D CAD projects below. Click on the models to view them in 3D. Follow my journey through learning Fusion 360</p>
+                    <!-- new model -->
+                    <div class="models-grid">
+                        <div class ="models-card">
+                            <h3 class = "model-title">Day 1 - Block</h3>
+                        <model-viewer class="model-viewer-size" id ="reveal" loading="eager" camera-controls touch-action="pan-y, pan-x"  tone-mapping="aces" src="./assets/models/block.glb" auto-rotate
+                            camera-controls shadow-intensity="1" rotation-per-second="30deg"
+        alt="A 3D model of a block"></model-viewer>                            
+                        </div>
+                        <!-- new model -->
+                        <div class ="models-card">
+                            <h3 class = "model-title">Day 2 - Bottle</h3>
+                            <model-viewer class="model-viewer-size" id="reveal" loading="eager" camera-controls touch-action="pan-y, pan-x"  tone-mapping="aces" src="./assets/models/bottle.glb" auto-rotate
+                            camera-controls shadow-intensity="1" rotation-per-second="30deg"></model-viewer>
+                        </div>
+                        <!-- new model -->
+                        <!-- <div class ="models-card">
+                            <h3 class = "model-title">Block</h3>
+                        </div>                         -->
+
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
