@@ -183,7 +183,7 @@ main {
   # REUSED STYLE
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
 .container {
-  padding-inline: 12px;
+  padding-inline: 0;
 }
 
 .section {
@@ -796,7 +796,7 @@ img {
 
 .responsive-img {
   max-width: 100%;
-  height: auto;
+  height: 80%;
   display: block;
   margin: 0 auto;
 }
