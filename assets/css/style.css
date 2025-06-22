@@ -597,12 +597,17 @@ img {
   margin-block: 10px 30px;
 }
 
-
 .hero-banner {
   border-radius: var(--blob-radius);
   overflow: hidden;
   animation: blobAnim 30s linear infinite;
+  max-width: 475px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
 
 /* https://9elements.github.io/fancy-border-radius/#43.40.52.51--.
  */
