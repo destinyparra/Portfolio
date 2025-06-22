@@ -597,13 +597,6 @@ img {
   margin-block: 10px 30px;
 }
 
-/* .grad-photo-img {
-  max-width: 320px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-} */
 
 .hero-banner {
   border-radius: var(--blob-radius);
