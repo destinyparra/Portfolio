@@ -767,6 +767,68 @@ img {
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # PROJECTS / project
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+/* keep header fixed and above content */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 64px;
+  /* adjust to match your header height */
+  background: inherit;
+  /* keeps same background as defined in main stylesheet */
+}
+
+/* offset page content so it's not hidden under the fixed header */
+main {
+  padding-top: calc(64px + 1rem);
+  /* same value as header height + small gap */
+}
+
+
+.post-hero .responsive-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.post-hero .responsive-img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+  margin: 1rem 0;
+}
+
+/* gallery photos: make them smaller and uniform */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.media-grid .responsive-img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* video embed: responsive with correct aspect ratio */
+.video-embed iframe {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 6px;
+}
 
 .project-list {
   display: grid;
