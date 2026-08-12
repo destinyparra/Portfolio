@@ -1083,10 +1083,31 @@ main {
   margin-block: 10px;
 }
 
+/*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
+  # CNC HTML PAGE
+\*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+.cnc-hero-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  object-fit: contain;
+}
+
+.cnc-photo-img {
+  width: 85%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  object-fit: contain;
+}
 
 /*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*\
   # MODELS
 \*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
 
 /* Model */
 .model-viewer-size {
